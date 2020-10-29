@@ -1,5 +1,9 @@
 package example
 
+import java.util.NoSuchElementException
+
+import scala.annotation.tailrec
+
 object Lists {
 
   /**
@@ -51,5 +55,17 @@ object Lists {
    * @return The largest element in `xs`
    * @throws java.util.NoSuchElementException if `xs` is an empty list
    */
-  def max(xs: List[Int]): Int = ???
+  def max(xs: List[Int]): Int = {
+    if (xs.isEmpty) throw new NoSuchElementException()
+    maxRecursive(Int.MinValue, xs)
+  }
+
+  @tailrec
+  private def maxRecursive(max: Int, xs: List[Int]): Int = {
+    if(xs.tail.isEmpty)
+      return max
+    val newMax = if (xs.head > max) xs.head else max
+    maxRecursive(newMax, xs.tail)
+  }
+
 }

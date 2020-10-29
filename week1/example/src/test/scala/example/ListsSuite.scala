@@ -1,5 +1,7 @@
 package example
 
+import java.util.NoSuchElementException
+
 import org.junit._
 
 /**
@@ -107,6 +109,21 @@ import org.junit._
 
   @Test def `max of a few numbers (10pts)`(): Unit = {
     assert(max(List(3, 7, 2)) == 7)
+  }
+  @Test def `max of a an empty list (10pts)`(): Unit = {
+    try {
+      max(List())
+      Assert.fail("No exception has been thrown")
+    }
+    catch {
+      case _: NoSuchElementException => ()
+    }
+  }
+  @Test def `max of a list of negative numbers (10pts)`(): Unit = {
+    assert(max(List(-1, -2, -3)) == -1)
+  }
+  @Test def `max of a list of zeros (10pts)`(): Unit = {
+    assert(max(List(0, 0, 0)) == 0)
   }
 
 
