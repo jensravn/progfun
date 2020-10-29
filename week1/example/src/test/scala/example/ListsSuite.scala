@@ -1,7 +1,6 @@
 package example
 
 import org.junit._
-import org.junit.Assert.assertEquals
 
 /**
  * This class implements a JUnit test suite for the methods in object
@@ -20,12 +19,12 @@ import org.junit.Assert.assertEquals
    * which tests that its argument evaluates to `true`. So one of the simplest
    * successful tests is the following:
    */
-  @Test def `one plus one is two (0pts)`: Unit = {
+  @Test def `one plus one is two (0pts)`(): Unit = {
     assert(1 + 1 == 2)
   }
 
-  @Test def `one plus one is three (0pts)?`: Unit = {
-    assert(1 + 1 == 3) // This assertion fails! Go ahead and fix it.
+  @Test def `one plus two is three (0pts)?`(): Unit = {
+    assert(1 + 2 == 3) // This assertion fails! Go ahead and fix it.
   }
 
   /**
@@ -49,8 +48,8 @@ import org.junit.Assert.assertEquals
    * We recommend to always use the Assert.assertEquals equality operator
    * when writing tests.
    */
-  @Test def `details why one plus one is not three (0pts)`: Unit = {
-    Assert.assertEquals(3, 1 + 1) // Fix me, please!
+    @Test def `details why one plus one is not three (0pts)`(): Unit = {
+    Assert.assertEquals(3, 1 + 2) // Fix me, please!
   }
 
   /**
@@ -60,12 +59,12 @@ import org.junit.Assert.assertEquals
    * In the following example, we test the fact that the method `intNotZero`
    * throws an `IllegalArgumentException` if its argument is `0`.
    */
-   @Test def `intNotZero throws an exception if its argument is 0`: Unit = {
+   @Test def `intNotZero throws an exception if its argument is 0`(): Unit = {
      try {
        intNotZero(0)
        Assert.fail("No exception has been thrown")
      } catch {
-       case e: IllegalArgumentException => ()
+       case _: IllegalArgumentException => ()
      }
    }
 
@@ -93,11 +92,20 @@ import org.junit.Assert.assertEquals
    * however it is recommended to write an individual `test` statement for
    * every tested aspect of a method.
    */
-  @Test def `sum of a few numbers (10pts)`: Unit = {
+  @Test def `sum of a few numbers (10pts)`(): Unit = {
     assert(sum(List(1,2,0)) == 3)
   }
+  @Test def `sum of a an empty list (10pts)`(): Unit = {
+    assert(sum(List()) == 0)
+  }
+  @Test def `sum of a list of negative numbers (10pts)`(): Unit = {
+    assert(sum(List(-1, -2, -3)) == -6)
+  }
+  @Test def `sum of a list of zeros (10pts)`(): Unit = {
+    assert(sum(List(0, 0, 0)) == 0)
+  }
 
-  @Test def `max of a few numbers (10pts)`: Unit = {
+  @Test def `max of a few numbers (10pts)`(): Unit = {
     assert(max(List(3, 7, 2)) == 7)
   }
 

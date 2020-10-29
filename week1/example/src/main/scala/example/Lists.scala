@@ -22,7 +22,21 @@ object Lists {
    * @param xs A list of natural numbers
    * @return The sum of all elements in `xs`
    */
-  def sum(xs: List[Int]): Int = ???
+  def sum(xs: List[Int]): Int = {
+    /*
+    // Pattern matching solution
+    xs match {
+      case x :: xs => x + sum(xs)
+      case x :: Nil => x
+      case Nil => 0
+    }
+    */
+    if (xs.isEmpty)
+      return 0
+    if (xs.tail.isEmpty)
+      return xs.head
+    xs.head + sum(xs.tail)
+  }
 
   /**
    * This method returns the largest element in a list of integers. If the
