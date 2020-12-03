@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaCompilerConfiguration">
+    <profile name="sbt 1" modules="0-programming-assignments,1-example_1214,1-example_1384,1-example_6625,1-example_9704,1-recfun_3805,2-funsets_4961,2-funsets_5960,3-objsets_4408,4-patmat_4177,6-forcomp_6730" />
+    <profile name="sbt 2" modules="1-example.progfun1-example,progfun1-example,progfun1-forcomp,progfun1-funsets,progfun1-objsets,progfun1-patmat,progfun1-recfun">
+      <option name="implicitConversions" value="true" />
+      <option name="deprecationWarnings" value="true" />
+    </profile>
+  </component>
+</project>

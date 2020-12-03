@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ScalaSbtSettings">
+    <option name="customVMPath" />
+    <option name="linkedExternalProjectsSettings">
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../1-recfun" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../1-recfun" />
+            <option value="$PROJECT_DIR$/../1-recfun/project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="1.2.8" />
+      </SbtProjectSettings>
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../2-funsets" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../2-funsets" />
+            <option value="$PROJECT_DIR$/../2-funsets/project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="1.2.8" />
+      </SbtProjectSettings>
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../3-objsets" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../3-objsets" />
+            <option value="$PROJECT_DIR$/../3-objsets/project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="1.2.8" />
+      </SbtProjectSettings>
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../4-patmat" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../4-patmat" />
+            <option value="$PROJECT_DIR$/../4-patmat/project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="1.2.8" />
+      </SbtProjectSettings>
+      <SbtProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/../6-forcomp" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/../6-forcomp" />
+            <option value="$PROJECT_DIR$/../6-forcomp/project" />
+          </set>
+        </option>
+        <option name="sbtVersion" value="1.2.8" />
+      </SbtProjectSettings>
+    </option>
+  </component>
+</project>
